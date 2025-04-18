@@ -37,7 +37,7 @@ export function Header() {
           />
           <div className="md:block border-l-2 border-[#3D405B]/20 pl-4">
             <h1 className="text-[#3D405B] font-bold text-2xl heading-font leading-tight">Round The Clock</h1>
-            <p className="text-[#3D405B]/70 text-sm font-medium tracking-wide">FOOD & BREVARAGES</p>
+            <p className="text-[#3D405B]/70 text-sm font-medium tracking-wide">CULINARY CUISINE</p>
           </div>
         </Link>
         

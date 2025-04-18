@@ -14,7 +14,7 @@ export function Footer() {
               />
               <div className="md:block border-l-2 border-[#fff]/20 pl-4">
             <h1 className="text-[#fff] font-bold text-2xl heading-font leading-tight">Round The Clock</h1>
-            <p className="text-[#fff]/70 text-sm font-medium tracking-wide">FOOD & BREVARAGES</p>
+            <p className="text-[#fff]/70 text-sm font-medium tracking-wide">CULINARY CUISINE</p>
           </div>
             </div>
             <p className="text-gray-400 mb-6">

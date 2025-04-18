@@ -14,30 +14,32 @@ export function HeroSection() {
         <img 
           src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
           alt="Restaurant interior with elegant table settings" 
-          className="w-full h-full object-cover" 
+          className="w-full h-full object-cover brightness-[0.85]" 
         />
-        <div className="absolute inset-0 bg-[#2A2A2A]/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10 mt-16">
         <div className="max-w-xl text-[#F4F1DE]">
           <h1 
             ref={heroTitleRef}
-            className="text-4xl md:text-6xl font-bold heading-font mb-4 opacity-0"
+            className="text-4xl md:text-6xl font-bold heading-font mb-4 opacity-0 drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)] text-white"
           >
             Culinary Excellence Redefined
           </h1>
-          <p className="text-lg md:text-xl mb-8 opacity-90">Experience the perfect blend of traditional flavors and modern culinary techniques in a warm, elegant atmosphere.</p>
+          <p className="text-lg md:text-xl mb-8 text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] font-medium">
+            Experience the perfect blend of traditional flavors and modern culinary techniques in a warm, elegant atmosphere.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="#menu" 
-              className="bg-[#E07A5F] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#E07A5F]/90 transition-colors duration-300 text-center"
+              className="bg-[#E07A5F] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#E07A5F]/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Explore Menu
             </a>
             <a 
               href="#reserve" 
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors duration-300 text-center"
+              className="bg-white/10 backdrop-blur-sm border-2 border-white/70 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Make Reservation
             </a>
