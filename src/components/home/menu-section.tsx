@@ -65,7 +65,7 @@ const menuItems: MenuItem[] = [
     description: "Premium beef patty with caramelized onions, bacon, and special sauce.",
     price: "₹320",
     image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80",
-    category: "fastfood",
+    category: "Quick Bites",
     isPopular: true
   },
   {
@@ -74,7 +74,7 @@ const menuItems: MenuItem[] = [
     description: "Crispy fries topped with cheese sauce, bacon bits, and green onions.",
     price: "₹220",
     image: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&q=80",
-    category: "fastfood",
+    category: "Quick Bites",
     isPopular: true
   },
 
@@ -137,10 +137,10 @@ export function MenuSection() {
           Assamese
         </button>
         <button 
-          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "fastfood" ? "bg-[#E07A5F] text-white" : ""}`}
-          onClick={() => setActiveCategory("fastfood")}
+          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "Quick Bites" ? "bg-[#E07A5F] text-white" : ""}`}
+          onClick={() => setActiveCategory("Quick Bites")}
         >
-          Fast Food
+          Quick Bites
         </button>
       </div>
       
