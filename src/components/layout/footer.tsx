@@ -12,7 +12,7 @@ export function Footer() {
                 alt="Round D Clock Logo" 
                 className="h-16 w-auto object-contain logo-footer"
               />
-              <div className="hidden md:block border-l-2 border-[#fff]/20 pl-4">
+              <div className="md:block border-l-2 border-[#fff]/20 pl-4">
             <h1 className="text-[#fff] font-bold text-2xl heading-font leading-tight">Round The Clock</h1>
             <p className="text-[#fff]/70 text-sm font-medium tracking-wide">FOOD & BREVARAGES</p>
           </div>
