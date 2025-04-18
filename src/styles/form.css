@@ -1,0 +1,44 @@
+/* Form Component Styles */
+.form-input {
+  @apply bg-white text-foreground border-2 border-gray-200 rounded-md px-4 py-2;
+}
+
+.form-input:focus {
+  @apply outline-none border-[#E07A5F] ring-0;
+}
+
+.form-input:hover {
+  @apply border-gray-300;
+}
+
+.select-trigger {
+  @apply bg-white text-foreground border-2 border-gray-200 rounded-md px-4 py-2 min-h-[40px];
+}
+
+.select-trigger:focus {
+  @apply outline-none border-[#E07A5F] ring-0;
+}
+
+.select-trigger:hover {
+  @apply border-gray-300;
+}
+
+.select-content {
+  @apply bg-white text-foreground border border-gray-200 rounded-md shadow-md overflow-hidden;
+}
+
+.select-item {
+  @apply px-4 py-2 hover:bg-gray-100 focus:bg-gray-100 cursor-pointer;
+}
+
+.textarea {
+  @apply bg-white text-foreground border-2 border-gray-200 rounded-md px-4 py-2;
+}
+
+.textarea:focus {
+  @apply outline-none border-[#E07A5F] ring-0;
+}
+
+.textarea:hover {
+  @apply border-gray-300;
+} 

@@ -6,12 +6,16 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="mb-6">
+            <div className="mb-6 flex items-center">
               <img 
                 src={logoPath} 
                 alt="Round D Clock Logo" 
-                className="h-16 w-auto object-contain mb-4 logo-footer"
+                className="h-16 w-auto object-contain logo-footer"
               />
+              <div className="hidden md:block border-l-2 border-[#fff]/20 pl-4">
+            <h1 className="text-[#fff] font-bold text-2xl heading-font leading-tight">Round The Clock</h1>
+            <p className="text-[#fff]/70 text-sm font-medium tracking-wide">FOOD & BREVARAGES</p>
+          </div>
             </div>
             <p className="text-gray-400 mb-6">
               Experience culinary excellence in a warm, inviting atmosphere. Our passion for exceptional food and service makes every visit memorable.

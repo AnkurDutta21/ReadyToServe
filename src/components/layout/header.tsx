@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { Link } from "wouter";
 import { setupScrollHeader } from "@/lib/gsap";
 import MobileMenu from "./mobile-menu";
-import logoPath from "../../assets/Round the Clock Logo_100425.png";
+import logoPath from "../../assets/rdc.png";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,12 +29,16 @@ export function Header() {
       className="fixed w-full bg-[#F4F1DE]/90 backdrop-blur-sm z-50 shadow-sm transition-all duration-300 py-3"
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/" className="z-10" onClick={scrollToTop}>
+        <Link href="/" className="z-10 flex items-center gap-4" onClick={scrollToTop}>
           <img 
             src={logoPath} 
             alt="Round D Clock Logo" 
             className="h-12 md:h-16 w-auto object-contain logo-custom" 
           />
+          <div className="md:block border-l-2 border-[#3D405B]/20 pl-4">
+            <h1 className="text-[#3D405B] font-bold text-2xl heading-font leading-tight">Round The Clock</h1>
+            <p className="text-[#3D405B]/70 text-sm font-medium tracking-wide">FOOD & BREVARAGES</p>
+          </div>
         </Link>
         
         {/* Desktop Navigation */}

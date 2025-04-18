@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import "@/styles/form.css";
 
 const reservationSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -59,7 +60,7 @@ export function ReservationSection() {
             </p>
             
             <Form {...form}>
-              <form onSubmit={form.handleSubmit(handleSubmit)} className="reservation-form space-y-6">
+              <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <FormField
                     control={form.control}
@@ -68,7 +69,7 @@ export function ReservationSection() {
                       <FormItem>
                         <FormLabel>Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your full name" {...field} />
+                          <Input placeholder="Your full name" {...field} className="form-input" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -82,7 +83,7 @@ export function ReservationSection() {
                       <FormItem>
                         <FormLabel>Email Address</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your email address" {...field} />
+                          <Input placeholder="Your email address" {...field} className="form-input" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -96,7 +97,7 @@ export function ReservationSection() {
                       <FormItem>
                         <FormLabel>Date</FormLabel>
                         <FormControl>
-                          <Input type="date" {...field} />
+                          <Input type="date" {...field} className="form-input" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -111,20 +112,20 @@ export function ReservationSection() {
                         <FormLabel>Time</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="select-trigger">
                               <SelectValue placeholder="Select a time" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent>
-                            <SelectItem value="17:00">5:00 PM</SelectItem>
-                            <SelectItem value="17:30">5:30 PM</SelectItem>
-                            <SelectItem value="18:00">6:00 PM</SelectItem>
-                            <SelectItem value="18:30">6:30 PM</SelectItem>
-                            <SelectItem value="19:00">7:00 PM</SelectItem>
-                            <SelectItem value="19:30">7:30 PM</SelectItem>
-                            <SelectItem value="20:00">8:00 PM</SelectItem>
-                            <SelectItem value="20:30">8:30 PM</SelectItem>
-                            <SelectItem value="21:00">9:00 PM</SelectItem>
+                          <SelectContent className="select-content">
+                            <SelectItem value="17:00" className="select-item">5:00 PM</SelectItem>
+                            <SelectItem value="17:30" className="select-item">5:30 PM</SelectItem>
+                            <SelectItem value="18:00" className="select-item">6:00 PM</SelectItem>
+                            <SelectItem value="18:30" className="select-item">6:30 PM</SelectItem>
+                            <SelectItem value="19:00" className="select-item">7:00 PM</SelectItem>
+                            <SelectItem value="19:30" className="select-item">7:30 PM</SelectItem>
+                            <SelectItem value="20:00" className="select-item">8:00 PM</SelectItem>
+                            <SelectItem value="20:30" className="select-item">8:30 PM</SelectItem>
+                            <SelectItem value="21:00" className="select-item">9:00 PM</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -140,19 +141,19 @@ export function ReservationSection() {
                         <FormLabel>Number of Guests</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="select-trigger">
                               <SelectValue placeholder="Select number of guests" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent>
-                            <SelectItem value="1">1 Person</SelectItem>
-                            <SelectItem value="2">2 People</SelectItem>
-                            <SelectItem value="3">3 People</SelectItem>
-                            <SelectItem value="4">4 People</SelectItem>
-                            <SelectItem value="5">5 People</SelectItem>
-                            <SelectItem value="6">6 People</SelectItem>
-                            <SelectItem value="7-10">7-10 People</SelectItem>
-                            <SelectItem value="10+">More than 10 People</SelectItem>
+                          <SelectContent className="select-content">
+                            <SelectItem value="1" className="select-item">1 Person</SelectItem>
+                            <SelectItem value="2" className="select-item">2 People</SelectItem>
+                            <SelectItem value="3" className="select-item">3 People</SelectItem>
+                            <SelectItem value="4" className="select-item">4 People</SelectItem>
+                            <SelectItem value="5" className="select-item">5 People</SelectItem>
+                            <SelectItem value="6" className="select-item">6 People</SelectItem>
+                            <SelectItem value="7-10" className="select-item">7-10 People</SelectItem>
+                            <SelectItem value="10+" className="select-item">More than 10 People</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -168,16 +169,16 @@ export function ReservationSection() {
                         <FormLabel>Special Occasion</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="select-trigger">
                               <SelectValue placeholder="Select occasion (optional)" />
                             </SelectTrigger>
                           </FormControl>
-                          <SelectContent>
-                            <SelectItem value="birthday">Birthday</SelectItem>
-                            <SelectItem value="anniversary">Anniversary</SelectItem>
-                            <SelectItem value="business">Business Dinner</SelectItem>
-                            <SelectItem value="date">Date Night</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
+                          <SelectContent className="select-content">
+                            <SelectItem value="birthday" className="select-item">Birthday</SelectItem>
+                            <SelectItem value="anniversary" className="select-item">Anniversary</SelectItem>
+                            <SelectItem value="business" className="select-item">Business Dinner</SelectItem>
+                            <SelectItem value="date" className="select-item">Date Night</SelectItem>
+                            <SelectItem value="other" className="select-item">Other</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -195,7 +196,7 @@ export function ReservationSection() {
                       <FormControl>
                         <Textarea 
                           placeholder="Any special requests or dietary requirements?"
-                          className="resize-none"
+                          className="resize-none textarea"
                           {...field}
                         />
                       </FormControl>
@@ -206,7 +207,7 @@ export function ReservationSection() {
                 
                 <Button 
                   type="submit" 
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="bg-[#E07A5F] text-white hover:bg-[#E07A5F]/90 px-8 py-6 rounded-full"
                 >
                   Confirm Reservation
                 </Button>

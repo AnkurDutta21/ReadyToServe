@@ -57,7 +57,7 @@ const menuItems: MenuItem[] = [
     name: "Elderflower Spritz",
     description: "A refreshing blend of elderflower liqueur, prosecco, soda water, and fresh mint.",
     price: "$16",
-    image: "https://images.unsplash.com/photo-1527761939622-933c40ac3019?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D",
     category: "drinks"
   },
   {
