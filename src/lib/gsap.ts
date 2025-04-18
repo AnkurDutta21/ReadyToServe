@@ -7,7 +7,7 @@ export function gsapSetup() {
 }
 
 // Hero section animation
-export function animateHero(heroTitleRef: React.RefObject<HTMLHeadingElement>) {
+export function animateHero(heroTitleRef: React.RefObject<HTMLHeadingElement | null>) {
   if (heroTitleRef.current) {
     gsap.to(heroTitleRef.current, {
       y: 0,
@@ -64,8 +64,6 @@ export function fadeInElement(elementRef: React.RefObject<HTMLElement>, delay: n
 
 // Shrink header on scroll
 export function setupScrollHeader(headerRef: React.RefObject<HTMLElement>) {
-  let lastScrollTop = 0;
-  
   const handleScroll = () => {
     if (!headerRef.current) return;
     
@@ -78,8 +76,6 @@ export function setupScrollHeader(headerRef: React.RefObject<HTMLElement>) {
       headerRef.current.classList.add('py-3');
       headerRef.current.classList.remove('py-2');
     }
-    
-    lastScrollTop = scrollTop;
   };
   
   window.addEventListener('scroll', handleScroll);

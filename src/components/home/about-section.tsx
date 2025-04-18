@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import PageSection from "@/components/ui/page-section";
 
 export function AboutSection() {

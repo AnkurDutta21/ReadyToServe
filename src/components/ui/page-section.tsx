@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { cn } from "@/lib/utils";
 
 interface PageSectionProps extends React.HTMLAttributes<HTMLElement> {
@@ -17,8 +17,6 @@ export function PageSection({
   container = true,
   ...props
 }: PageSectionProps) {
-  const sectionRef = useRef<HTMLElement>(null);
-  
   const bgColorClasses = {
     light: "bg-[#F4F1DE]",
     white: "bg-white",
@@ -29,7 +27,6 @@ export function PageSection({
   return (
     <section
       id={id}
-      ref={sectionRef}
       className={cn(
         "py-20",
         bgColorClasses[bgColor],

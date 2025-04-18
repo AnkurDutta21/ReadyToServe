@@ -1,5 +1,3 @@
-import { Link } from "wouter";
-
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
