@@ -11,63 +11,94 @@ interface MenuItem {
   isVegetarian?: boolean;
   isPopular?: boolean;
   isChefSpecial?: boolean;
+  isSpicy?: boolean;
 }
 
 const menuItems: MenuItem[] = [
+  // Indian Cuisine
   {
     id: 1,
-    name: "Mediterranean Bruschetta",
-    description: "Fresh tomatoes, basil, and mozzarella on toasted artisan bread with balsamic reduction.",
-    price: "$14",
-    image: "https://images.unsplash.com/photo-1664575198263-269a022d6e14?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    category: "starters",
-    isVegetarian: true,
-    isPopular: true
+    name: "Butter Chicken",
+    description: "Tender chicken in rich tomato-butter gravy with aromatic spices, served with naan bread.",
+    price: "$18",
+    image: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&q=80",
+    category: "indian",
+    isPopular: true,
+    isChefSpecial: true
   },
   {
     id: 2,
-    name: "Herb-Crusted Salmon",
-    description: "Pan-seared salmon with a herb crust, served with roasted vegetables and lemon butter sauce.",
-    price: "$28",
-    image: "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80",
-    category: "mains",
-    isChefSpecial: true
-  },
-  {
-    id: 3,
-    name: "Truffle Risotto",
-    description: "Creamy arborio rice with wild mushrooms, truffle oil, and shaved parmesan cheese.",
-    price: "$26",
-    image: "https://images.unsplash.com/photo-1546964124-0cce460f38ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80",
-    category: "mains",
+    name: "Paneer Tikka Masala",
+    description: "Grilled cottage cheese in spiced creamy tomato gravy, a vegetarian delight.",
+    price: "$16",
+    image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&q=80",
+    category: "indian",
     isVegetarian: true,
     isPopular: true
   },
+
+  // Assamese Cuisine
+  {
+    id: 3,
+    name: "Masor Tenga",
+    description: "Traditional Assamese sour fish curry with tomatoes and elephant apple.",
+    price: "$20",
+    image: "https://images.unsplash.com/photo-1516714435131-44d6b64dc6a2?auto=format&fit=crop&q=80",
+    category: "assamese",
+    isChefSpecial: true
+  },
   {
     id: 4,
-    name: "Chocolate Lava Cake",
-    description: "Warm chocolate cake with a molten center, served with vanilla bean ice cream and berries.",
-    price: "$12",
-    image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-    category: "desserts",
+    name: "Hanhor Mangxo",
+    description: "Traditional Assamese-style duck curry cooked with bamboo shoots, taro, and indigenous herbs.",
+    price: "$24",
+    image: "https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&q=80",
+    category: "assamese",
+    isChefSpecial: true,
+    isSpicy: true
+  },
+
+  // Fast Food
+  {
+    id: 5,
+    name: "Gourmet Burger",
+    description: "Premium beef patty with caramelized onions, bacon, and special sauce.",
+    price: "$15",
+    image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&q=80",
+    category: "fastfood",
     isPopular: true
   },
   {
-    id: 5,
-    name: "Elderflower Spritz",
-    description: "A refreshing blend of elderflower liqueur, prosecco, soda water, and fresh mint.",
-    price: "$16",
-    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Zm9vZHxlbnwwfHwwfHx8MA%3D%3D",
-    category: "drinks"
-  },
-  {
     id: 6,
-    name: "Seared Scallops",
-    description: "Pan-seared scallops with cauliflower puree, crispy pancetta, and microgreens.",
-    price: "$18",
-    image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=713&q=80",
-    category: "starters",
-    isChefSpecial: true
+    name: "Loaded Fries",
+    description: "Crispy fries topped with cheese sauce, bacon bits, and green onions.",
+    price: "$10",
+    image: "https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&q=80",
+    category: "fastfood",
+    isPopular: true
+  },
+
+  // More Indian Items
+  {
+    id: 7,
+    name: "Biryani",
+    description: "Fragrant basmati rice cooked with tender meat and aromatic spices.",
+    price: "$22",
+    image: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&q=80",
+    category: "indian",
+    isChefSpecial: true,
+    isPopular: true
+  },
+
+  // More Assamese Items
+  {
+    id: 8,
+    name: "Pitha Platter",
+    description: "Assortment of traditional Assamese rice cakes with different fillings.",
+    price: "$14",
+    image: "https://images.unsplash.com/photo-1567337710282-00832b415979?auto=format&fit=crop&q=80",
+    category: "assamese",
+    isVegetarian: true
   }
 ];
 
@@ -81,68 +112,69 @@ export function MenuSection() {
   return (
     <PageSection id="menu">
       <div className="text-center mb-16 section-fade">
-        <h2 className="text-3xl md:text-4xl font-bold heading-font text-[#3D405B] mb-3">Our Exquisite Menu</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">Discover our carefully crafted selection of dishes, each prepared with the finest ingredients and meticulous attention to detail.</p>
+        <h2 className="text-3xl md:text-4xl font-bold heading-font text-[#3D405B] mb-3">Our Diverse Menu</h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">Experience a fusion of flavors from traditional Assamese cuisine to Indian delicacies and international fast food favorites.</p>
       </div>
       
       {/* Menu Categories */}
       <div className="flex flex-wrap justify-center gap-4 mb-12 section-fade">
         <button 
-          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "all" ? "active-category" : ""}`}
+          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "all" ? "bg-[#E07A5F] text-white" : ""}`}
           onClick={() => setActiveCategory("all")}
         >
-          All
+          All Cuisines
         </button>
         <button 
-          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "starters" ? "active-category" : ""}`}
-          onClick={() => setActiveCategory("starters")}
+          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "indian" ? "bg-[#E07A5F] text-white" : ""}`}
+          onClick={() => setActiveCategory("indian")}
         >
-          Starters
+          Indian
         </button>
         <button 
-          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "mains" ? "active-category" : ""}`}
-          onClick={() => setActiveCategory("mains")}
+          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "assamese" ? "bg-[#E07A5F] text-white" : ""}`}
+          onClick={() => setActiveCategory("assamese")}
         >
-          Main Courses
+          Assamese
         </button>
         <button 
-          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "desserts" ? "active-category" : ""}`}
-          onClick={() => setActiveCategory("desserts")}
+          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "fastfood" ? "bg-[#E07A5F] text-white" : ""}`}
+          onClick={() => setActiveCategory("fastfood")}
         >
-          Desserts
-        </button>
-        <button 
-          className={`px-6 py-2 rounded-full border border-[#E07A5F] text-[#E07A5F] hover:bg-[#E07A5F] hover:text-white transition-colors duration-300 ${activeCategory === "drinks" ? "active-category" : ""}`}
-          onClick={() => setActiveCategory("drinks")}
-        >
-          Drinks
+          Fast Food
         </button>
       </div>
       
       {/* Menu Items */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredItems.map(item => (
-          <div key={item.id} className="menu-item bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 section-fade">
-            <img 
-              src={item.image} 
-              alt={item.name} 
-              className="w-full h-60 object-cover" 
-            />
+          <div key={item.id} className="menu-item bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 section-fade">
+            <div className="relative">
+              <img 
+                src={item.image} 
+                alt={item.name} 
+                className="w-full h-60 object-cover" 
+              />
+              {item.isSpicy && (
+                <span className="absolute top-4 right-4 bg-red-500 text-white px-2 py-1 rounded-full text-xs">
+                  <i className="fas fa-pepper-hot mr-1"></i> Spicy
+                </span>
+              )}
+            </div>
             <div className="p-6">
               <div className="flex justify-between items-start mb-3">
                 <h3 className="text-xl font-semibold heading-font text-[#3D405B]">{item.name}</h3>
                 <span className="text-[#E07A5F] font-bold">{item.price}</span>
               </div>
               <p className="text-gray-600 mb-4">{item.description}</p>
-              <div className="flex items-center text-sm text-gray-500">
+              <div className="flex flex-wrap items-center gap-3 text-sm text-gray-500">
                 {item.isVegetarian && (
-                  <span className="mr-3"><i className="fas fa-leaf text-[#81B29A]"></i> Vegetarian</span>
+                  <span className="flex items-center"><i className="fas fa-leaf text-green-500 mr-1"></i> Vegetarian</span>
                 )}
                 {item.isPopular && (
-                  <span className="mr-3"><i className="fas fa-fire-alt text-[#E07A5F]"></i> Popular</span>
+                  <span className="flex items-center"><i className="fas fa-fire-alt text-[#E07A5F] mr-1"></i> Popular</span>
                 )}
                 {item.isChefSpecial && (
-                  <span><i className="fas fa-award text-[#E07A5F]"></i> Chef's Special</span>
+                  <span className="flex items-center"><i className="fas fa-award text-[#E07A5F] mr-1"></i> Chef's Special</span>
                 )}
               </div>
             </div>
@@ -152,10 +184,10 @@ export function MenuSection() {
       
       <div className="text-center mt-12">
         <a 
-          href="#" 
+          href="#reserve" 
           className="inline-block bg-[#E07A5F] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#E07A5F]/90 transition-colors duration-300 section-fade"
         >
-          View Full Menu
+          Reserve a Table
         </a>
       </div>
     </PageSection>
