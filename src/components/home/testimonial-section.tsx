@@ -1,4 +1,5 @@
 import PageSection from "@/components/ui/page-section";
+import { FaStar, FaStarHalfAlt, FaUser } from "react-icons/fa";
 
 interface Testimonial {
   id: number;
@@ -39,40 +40,40 @@ export function TestimonialSection() {
     
     // Full stars
     for (let i = 1; i <= Math.floor(rating); i++) {
-      stars.push(<i key={`star-${i}`} className="fas fa-star"></i>);
+      stars.push(<FaStar key={`star-${i}`} className="text-[#F4E5AC]" />);
     }
     
     // Half star if needed
     if (rating % 1 !== 0) {
-      stars.push(<i key="half-star" className="fas fa-star-half-alt"></i>);
+      stars.push(<FaStarHalfAlt key="half-star" className="text-[#F4E5AC]" />);
     }
     
     return stars;
   };
   
   return (
-    <PageSection>
+    <PageSection bgColor="dark">
       <div className="text-center mb-16 section-fade">
-        <h2 className="text-3xl md:text-4xl font-bold heading-font text-[#3D405B] mb-3">What Our Guests Say</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">Read about the experiences of our valued guests and why they keep coming back.</p>
+        <h2 className="text-3xl md:text-4xl font-bold heading-font text-[#F4E5AC] mb-3">What Our Guests Say</h2>
+        <p className="text-gray-300 max-w-2xl mx-auto">Read about the experiences of our valued guests and why they keep coming back.</p>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {testimonials.map(testimonial => (
-          <div key={testimonial.id} className="bg-white p-8 rounded-lg shadow-md section-fade">
+          <div key={testimonial.id} className="bg-[#2A2A2A] p-8 rounded-lg shadow-md section-fade">
             <div className="flex items-center mb-4">
-              <div className="text-[#F2CC8F]">
+              <div className="flex gap-1">
                 {renderStars(testimonial.rating)}
               </div>
             </div>
-            <p className="text-gray-700 mb-6 italic">"{testimonial.text}"</p>
+            <p className="text-gray-300 mb-6 italic">"{testimonial.text}"</p>
             <div className="flex items-center">
-              <div className="mr-4 h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                <i className="fas fa-user"></i>
+              <div className="mr-4 h-12 w-12 rounded-full bg-[#1A1A1A] flex items-center justify-center text-[#F4E5AC]">
+                <FaUser size={20} />
               </div>
               <div>
-                <h4 className="font-semibold text-[#3D405B]">{testimonial.name}</h4>
-                <p className="text-gray-500 text-sm">{testimonial.title}</p>
+                <h4 className="font-semibold text-[#F4E5AC]">{testimonial.name}</h4>
+                <p className="text-gray-400 text-sm">{testimonial.title}</p>
               </div>
             </div>
           </div>

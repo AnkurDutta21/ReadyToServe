@@ -36,7 +36,7 @@ export function MapSection() {
   }, []);
   
   return (
-    <section className="h-96 bg-[#F4F1DE] section-fade">
+    <section className="h-96 bg-[#FF8C42]/10 section-fade">
       <div 
         ref={mapRef}
         className="h-full w-full"
