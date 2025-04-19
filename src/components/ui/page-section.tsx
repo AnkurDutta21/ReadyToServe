@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
+import { cva } from "class-variance-authority";
 
 interface PageSectionProps extends React.HTMLAttributes<HTMLElement> {
   id?: string;
@@ -8,6 +9,19 @@ interface PageSectionProps extends React.HTMLAttributes<HTMLElement> {
   bgColor?: "light" | "white" | "dark" | "secondary";
   container?: boolean;
 }
+
+const sectionVariants = cva(
+  "relative w-full overflow-hidden",
+  {
+    variants: {
+      variant: {
+        default: "bg-transparent",
+        dark: "bg-[#1A1A1A]",
+        light: "bg-[#D32B2B]/10",
+      },
+    },
+  }
+);
 
 export function PageSection({
   id,
@@ -18,10 +32,10 @@ export function PageSection({
   ...props
 }: PageSectionProps) {
   const bgColorClasses = {
-    light: "bg-[#F4F1DE]",
+    light: "bg-[#D32B2B]/10",
     white: "bg-white",
-    dark: "bg-[#2A2A2A] text-white",
-    secondary: "bg-[#3D405B] text-white",
+    dark: "bg-[#1A1A1A] text-[#F4E5AC]",
+    secondary: "bg-[#D32B2B] text-[#F4E5AC]",
   };
   
   return (

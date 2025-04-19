@@ -13,6 +13,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaInstagram, FaTwitter, FaYelp } from "react-icons/fa";
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -41,57 +42,57 @@ const handleSubmit =(values : any)=>{
   console.log(values)
 }
   return (
-    <PageSection id="contact" bgColor="secondary">
+    <PageSection id="contact" bgColor="dark">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div className="lg:col-span-1 section-fade">
-          <h2 className="text-3xl md:text-4xl font-bold heading-font mb-6">Contact Us</h2>
-          <p className="mb-8 opacity-90">We'd love to hear from you. For reservations, special events, or any inquiries, please reach out using the information below.</p>
+          <h2 className="text-3xl md:text-4xl font-bold heading-font text-[#F4E5AC] mb-6">Contact Us</h2>
+          <p className="text-gray-300 mb-8">We'd love to hear from you. For reservations, special events, or any inquiries, please reach out using the information below.</p>
           
           <div className="space-y-6">
             <div className="flex items-start">
-              <div className="mr-4 text-xl text-[#F2CC8F]">
-                <i className="fas fa-map-marker-alt"></i>
+              <div className="mr-4 text-xl text-[#D32B2B]">
+                <FaMapMarkerAlt size={24} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Address</h3>
-                <p className="opacity-90">Cenikuthi<br/>Guwahati, Assam 781001</p>
+                <h3 className="text-lg font-semibold mb-1 text-[#F4E5AC]">Address</h3>
+                <p className="text-gray-300">Cenikuthi<br/>Guwahati, Assam 781001</p>
               </div>
             </div>
             
             <div className="flex items-start">
-              <div className="mr-4 text-xl text-[#F2CC8F]">
-                <i className="fas fa-phone"></i>
+              <div className="mr-4 text-xl text-[#D32B2B]">
+                <FaPhone size={24} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                <p className="opacity-90">+91 9864000000</p>
+                <h3 className="text-lg font-semibold mb-1 text-[#F4E5AC]">Phone</h3>
+                <p className="text-gray-300">+91 9864000000</p>
               </div>
             </div>
             
             <div className="flex items-start">
-              <div className="mr-4 text-xl text-[#F2CC8F]">
-                <i className="fas fa-envelope"></i>
+              <div className="mr-4 text-xl text-[#D32B2B]">
+                <FaEnvelope size={24} />
               </div>
               <div>
-                <h3 className="text-lg font-semibold mb-1">Email</h3>
-                <p className="opacity-90">reservations@rounddclock.com</p>
+                <h3 className="text-lg font-semibold mb-1 text-[#F4E5AC]">Email</h3>
+                <p className="text-gray-300">reservations@rounddclock.com</p>
               </div>
             </div>
             
             <div className="pt-4">
-              <h3 className="text-lg font-semibold mb-3">Follow Us</h3>
+              <h3 className="text-lg font-semibold mb-3 text-[#F4E5AC]">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <i className="fab fa-facebook-f"></i>
+                <a href="#" className="text-gray-300 hover:text-[#D32B2B] transition-colors">
+                  <FaFacebook size={24} />
                 </a>
-                <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <i className="fab fa-instagram"></i>
+                <a href="#" className="text-gray-300 hover:text-[#D32B2B] transition-colors">
+                  <FaInstagram size={24} />
                 </a>
-                <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <i className="fab fa-twitter"></i>
+                <a href="#" className="text-gray-300 hover:text-[#D32B2B] transition-colors">
+                  <FaTwitter size={24} />
                 </a>
-                <a href="#" className="h-10 w-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
-                  <i className="fab fa-yelp"></i>
+                <a href="#" className="text-gray-300 hover:text-[#D32B2B] transition-colors">
+                  <FaYelp size={24} />
                 </a>
               </div>
             </div>
@@ -99,8 +100,8 @@ const handleSubmit =(values : any)=>{
         </div>
         
         <div className="lg:col-span-2 section-fade">
-          <div className="bg-white text-[#2A2A2A] p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold heading-font text-[#3D405B] mb-6">Send Us a Message</h3>
+          <div className="bg-[#F5F5F5] p-8 rounded-lg shadow-lg">
+            <h3 className="text-2xl font-bold heading-font text-[#1A1A1A] mb-6">Send Us a Message</h3>
             
             <Form {...form}>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -110,11 +111,15 @@ const handleSubmit =(values : any)=>{
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Full Name</FormLabel>
+                        <FormLabel className="text-[#1A1A1A]">Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your full name" {...field} />
+                          <Input 
+                            placeholder="Your full name" 
+                            className="bg-white border-gray-300 text-[#1A1A1A] focus:border-[#D32B2B] focus:ring-[#D32B2B]" 
+                            {...field} 
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-[#D32B2B]" />
                       </FormItem>
                     )}
                   />
@@ -124,11 +129,15 @@ const handleSubmit =(values : any)=>{
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email Address</FormLabel>
+                        <FormLabel className="text-[#1A1A1A]">Email Address</FormLabel>
                         <FormControl>
-                          <Input placeholder="Your email address" {...field} />
+                          <Input 
+                            placeholder="Your email address" 
+                            className="bg-white border-gray-300 text-[#1A1A1A] focus:border-[#D32B2B] focus:ring-[#D32B2B]" 
+                            {...field} 
+                          />
                         </FormControl>
-                        <FormMessage />
+                        <FormMessage className="text-[#D32B2B]" />
                       </FormItem>
                     )}
                   />
@@ -139,11 +148,15 @@ const handleSubmit =(values : any)=>{
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Subject</FormLabel>
+                      <FormLabel className="text-[#1A1A1A]">Subject</FormLabel>
                       <FormControl>
-                        <Input placeholder="Subject of your message" {...field} />
+                        <Input 
+                          placeholder="Subject of your message" 
+                          className="bg-white border-gray-300 text-[#1A1A1A] focus:border-[#D32B2B] focus:ring-[#D32B2B]" 
+                          {...field} 
+                        />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-[#D32B2B]" />
                     </FormItem>
                   )}
                 />
@@ -153,25 +166,23 @@ const handleSubmit =(values : any)=>{
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel className="text-[#1A1A1A]">Message</FormLabel>
                       <FormControl>
                         <Textarea 
                           placeholder="Your message"
-                          className="min-h-[120px]"
+                          className="min-h-[120px] bg-white border-gray-300 text-[#1A1A1A] focus:border-[#D32B2B] focus:ring-[#D32B2B]"
                           {...field}
                         />
                       </FormControl>
-                      <FormMessage />
+                      <FormMessage className="text-[#D32B2B]" />
                     </FormItem>
                   )}
                 />
                 
                 <Button 
                   type="submit" 
-                  className="bg-[#E07A5F] text-white hover:bg-[#E07A5F]/90 px-8 py-6 rounded-full"
-                  // disabled={mutation.isPending}
+                  className="w-full bg-[#D32B2B] text-[#F4E5AC] hover:bg-[#D32B2B]/90 px-8 py-6 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300"
                 >
-                  {/* {mutation.isPending ? "Sending..." : "Send Message"} */}
                   Send Message
                 </Button>
               </form>

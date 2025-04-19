@@ -20,26 +20,26 @@ export function HeroSection() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10 mt-16">
-        <div className="max-w-xl text-[#F4F1DE]">
+        <div className="max-w-xl text-[#F4E5AC]">
           <h1 
             ref={heroTitleRef}
-            className="text-4xl md:text-6xl font-bold heading-font mb-4 opacity-0 drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)] text-white"
+            className="text-4xl md:text-6xl font-bold heading-font mb-4 opacity-0 drop-shadow-[0_2px_20px_rgba(0,0,0,0.3)]"
           >
             Culinary Excellence Redefined
           </h1>
-          <p className="text-lg md:text-xl mb-8 text-white/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] font-medium">
+          <p className="text-lg md:text-xl mb-8 text-[#F4E5AC]/95 drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)] font-medium">
             Experience the perfect blend of traditional flavors and modern culinary techniques in a warm, elegant atmosphere.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
               href="#menu" 
-              className="bg-[#E07A5F] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#E07A5F]/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="bg-[#D32B2B] text-[#F4E5AC] px-8 py-3 rounded-full font-semibold hover:bg-[#D32B2B]/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Explore Menu
             </a>
             <a 
               href="#reserve" 
-              className="bg-white/10 backdrop-blur-sm border-2 border-white/70 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              className="bg-[#F4E5AC] text-[#D32B2B] px-8 py-3 rounded-full font-semibold hover:bg-[#F4E5AC]/90 transition-all duration-300 text-center shadow-lg hover:shadow-xl hover:-translate-y-0.5"
             >
               Make Reservation
             </a>
